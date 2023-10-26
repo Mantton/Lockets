@@ -31,10 +31,12 @@ struct NewLocketTypeView: View {
             }
             HStack {
                 Spacer()
-                Button("Continue") {}
-                    .buttonStyle(.bordered)
-                    .controlSize(.large)
-                    
+                Button("Continue") {
+                    model.setState(.content)
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.large)
+                
             }
         }
         .padding()
@@ -58,7 +60,7 @@ struct LocketTypeCell: View {
     private var image: String {
         type.image
     }
-
+    
     var body: some View {
         ZStack {
             color.opacity(0.25)
@@ -76,13 +78,13 @@ struct LocketTypeCell: View {
                     .foregroundStyle(color.opacity(0.75))
             }
             .padding()
-                
+            
         }
         .clipShape(shape)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(color, lineWidth: 3)
-                .opacity(model.locketType == type ? 1 : 0)
+                .opacity(model.locket.type == type ? 1 : 0)
         )
         .onTapGesture {
             model.setLocketType(type)

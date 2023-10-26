@@ -24,6 +24,9 @@
 		DF4F3FB82AEA01DA009BE544 /* CreateNoteLocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */; };
 		DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */; };
 		DF4F3FBD2AEA14D4009BE544 /* NewLocketCoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */; };
+		DF4F3FC02AEAEBE5009BE544 /* NewLocketPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FBF2AEAEBE5009BE544 /* NewLocketPreviewView.swift */; };
+		DF4F3FC22AEAF03C009BE544 /* NewLocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FC12AEAF03C009BE544 /* NewLocketData.swift */; };
+		DF69446F2AEAF69400906461 /* LocketPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69446E2AEAF69400906461 /* LocketPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteLocketView.swift; sourceTree = "<group>"; };
 		DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketCoreInfoView.swift; sourceTree = "<group>"; };
+		DF4F3FBF2AEAEBE5009BE544 /* NewLocketPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketPreviewView.swift; sourceTree = "<group>"; };
+		DF4F3FC12AEAF03C009BE544 /* NewLocketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketData.swift; sourceTree = "<group>"; };
+		DF69446E2AEAF69400906461 /* LocketPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 				DF4F3FA32AE9F087009BE544 /* AddNewLocketView.swift */,
 				DF4F3FA62AE9F24F009BE544 /* NewLocketTypeView.swift */,
 				DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */,
+				DF4F3FBF2AEAEBE5009BE544 /* NewLocketPreviewView.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4F3FAF2AE9FD3B009BE544 /* LocketType.swift */,
+				DF4F3FC12AEAF03C009BE544 /* NewLocketData.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */,
+				DF69446E2AEAF69400906461 /* LocketPreviewView.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -277,12 +286,15 @@
 				DF4F3FA72AE9F24F009BE544 /* NewLocketTypeView.swift in Sources */,
 				DF4F3FB62AEA0138009BE544 /* LocketContentGatewayView.swift in Sources */,
 				DF4F3FA42AE9F087009BE544 /* AddNewLocketView.swift in Sources */,
+				DF4F3FC22AEAF03C009BE544 /* NewLocketData.swift in Sources */,
 				DF4F3F962AE9E370009BE544 /* Locket.swift in Sources */,
 				DF4F3FB02AE9FD3B009BE544 /* LocketType.swift in Sources */,
 				DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */,
 				DF4F3F9E2AE9EDEA009BE544 /* LockedLocketsView.swift in Sources */,
 				DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */,
+				DF4F3FC02AEAEBE5009BE544 /* NewLocketPreviewView.swift in Sources */,
 				DF4F3FAD2AE9FB7F009BE544 /* Lockets+Color.swift in Sources */,
+				DF69446F2AEAF69400906461 /* LocketPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

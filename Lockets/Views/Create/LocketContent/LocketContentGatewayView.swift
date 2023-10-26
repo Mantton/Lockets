@@ -12,13 +12,19 @@ struct LocketContentGatewayView : View {
     var body: some View {
         VStack {
             Group {
-                switch model.locketType {
+                switch model.locket.type {
                 case .note:
                     CreateNoteLocketView()
                 case .letter:
                     Text("Letter")
-                default:
-                    Text("Not Implemented")
+                case .image:
+                    Text("Image")
+                case .link:
+                    Text("Link")
+                case .audio:
+                    Text("Audio")
+                case .video:
+                    Text("Video")
                 }
             }
         }

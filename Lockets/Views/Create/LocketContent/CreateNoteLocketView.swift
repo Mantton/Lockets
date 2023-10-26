@@ -44,11 +44,6 @@ struct CreateNoteLocketView: View {
             .frame(height: 12)
             .animation(.default, value: text)
         }
-        .onChange(of: model.state, initial: true, { oldValue, _ in
-            if oldValue == .content {
-                text.removeAll()
-            }
-        })
         LocketContentGatewayNavigationView(isNextDisabled: fill > 1 || characterCount <= 3, action: submit)
     }
     
@@ -62,7 +57,6 @@ struct CreateNoteLocketView: View {
     
     private func submit() {
         model.addNoteContent(text)
-        text.removeAll()
     }
 }
 

@@ -24,13 +24,9 @@ final class Locket {
     var onlyShowWhenUnlockable = false
     
     // Content
-    var letter: LetterContent?
-    var video: VideoRecordingContent?
-    var voice: VoiceRecordingContent?
-
-    
-    var photos: [PhotoContent]?
-    var songs: [SongContent]?
+    var letter: LocketTextAttachemnt?
+    var file: LocketFileAttachment?
+    var link: LocketLinkAttachment?
 
     
     init(title: String, type: LocketType, createdAt: Foundation.Date = Date.now, unlocksAt: Date, isUnlocked: Bool = false) {

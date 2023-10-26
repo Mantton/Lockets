@@ -9,13 +9,12 @@ import SwiftUI
 
 struct NewLocketCoreInfoView: View {
     @Environment(NewLocketModel.self) private var model
-    @State private var title: String = ""
-    @State private var date: Date = .now
-    @State private var showBeforeAvailable = false
     @FocusState private var isTitleFocused
     @FocusState private var isPassphraseFocused
 
     var body: some View {
+        @Bindable var model = model
+
         VStack(alignment: .leading, spacing: 20) {
             Text("Locket Info")
                 .font(.headline)
@@ -23,7 +22,7 @@ struct NewLocketCoreInfoView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("Name")
                     .font(.callout)
-                TextField(text: $title) {
+                TextField(text: $model.locket.title) {
                     Text("Locket Name")
                 }
                 .focused($isTitleFocused)
@@ -39,25 +38,29 @@ struct NewLocketCoreInfoView: View {
                 }
             }
             
-            DatePicker(selection: $date, in: Date.now...) {
+            DatePicker(selection: $model.locket.unlocksAt, in: Date.now.advanced(by: 1800)...) {
                 Text("Available On")
             }
             
-            Toggle(isOn: $showBeforeAvailable) {
+            Toggle(isOn: $model.locket.onlyShowWhenUnlockable) {
                 Text("Show Only When Unlockable")
             }
             
             
             Spacer()
             HStack {
+                Button("Back") {
+                    model.setState(.content)
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.large)
                 Spacer()
-                Button("Preview  🏹") {
+                Button("Preview") {
                     model.setState(.preview)
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
-                .disabled(title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || date < .now)
-                Spacer()
+                .disabled(model.locket.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || model.locket.unlocksAt < .now)
             }
         }
         .padding()
@@ -69,6 +72,10 @@ struct NewLocketCoreInfoView: View {
 }
 
 #Preview {
-    NewLocketCoreInfoView()
-        .environment(NewLocketModel())
+    NavigationStack {
+        NewLocketCoreInfoView()
+            .environment(NewLocketModel())
+            .navigationTitle("New Locket")
+    }
+
 }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class LetterContent {
+final class LocketTextAttachemnt {
     @Attribute(.allowsCloudEncryption)
     let content: String
     
@@ -19,18 +19,18 @@ final class LetterContent {
 }
 
 @Model
-final class PhotoContent {
+final class LocketFileAttachment {
     @Attribute(.allowsCloudEncryption)
     @Attribute(.externalStorage)
-    let photo: Data
+    let content: Data
     
-    init(photo: Data) {
-        self.photo = photo
+    init(content: Data) {
+        self.content = content
     }
 }
 
 @Model
-final class SongContent {
+final class LocketLinkAttachment {
     @Attribute(.allowsCloudEncryption)
     let url: URL
     
@@ -39,24 +39,3 @@ final class SongContent {
     }
 }
 
-@Model
-final class VoiceRecordingContent {
-    @Attribute(.allowsCloudEncryption)
-    @Attribute(.externalStorage)
-    let recording: Data
-    
-    init(recording: Data) {
-        self.recording = recording
-    }
-}
-
-@Model
-final class VideoRecordingContent {
-    @Attribute(.allowsCloudEncryption)
-    @Attribute(.externalStorage)
-    let recording: Data
-    
-    init(recording: Data) {
-        self.recording = recording
-    }
-}

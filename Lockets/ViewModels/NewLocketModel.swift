@@ -6,21 +6,16 @@
 //
 
 import SwiftUI
-
+import SwiftData
 
 @Observable
 final class NewLocketModel {
     var state: LocketCreationState = .type
-    
-    var locketType: LocketType = .note
-    var locketName: String = "" // TODO: Possibly a random name generator for this?
-    
-    var locket = Locket(title: "", type: .letter, unlocksAt: .now.advanced(by: 3600))
-    
+    var locket = NewLocketData()
     
     func setLocketType(_ type: LocketType) {
         withAnimation {
-            locketType = type
+            locket.type = type
         }
     }
     
@@ -31,8 +26,16 @@ final class NewLocketModel {
     }
     
     func addNoteContent(_ content: String) {
-        let sub = LetterContent(content: content)
-        locket.letter = sub
+        locket.text = content
+    }
+    
+    func setTitle(_ title: String) {
+        locket.title = title
+    }
+    
+    func save(_ context: ModelContext) {
+        let object = locket.toLocket()
+        context.insert(object)
     }
     
 }

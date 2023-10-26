@@ -21,7 +21,7 @@ struct AddNewLocketView: View {
                 NewLocketCoreInfoView()
                     .tag(LocketCreationState.core)
                 
-                Text("PReview")
+                NewLocketPreviewView()
                     .tag(LocketCreationState.preview)
 
             }
@@ -35,9 +35,9 @@ struct AddNewLocketView: View {
                 }
             }
             .environment(model)
-//            .onAppear {
-//                  UIScrollView.appearance().isScrollEnabled = false
-//            }
+            .onAppear {
+                  UIScrollView.appearance().isScrollEnabled = false
+            }
         }
     }
 }
