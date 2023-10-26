@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewLocketCoreInfoView: View {
     @Environment(NewLocketModel.self) private var model
+    @State private var date: Date = .now.advanced(by: 2000)
     @FocusState private var isTitleFocused
     @FocusState private var isPassphraseFocused
 
@@ -38,7 +39,7 @@ struct NewLocketCoreInfoView: View {
                 }
             }
             
-            DatePicker(selection: $model.locket.unlocksAt, in: Date.now.advanced(by: 1800)...) {
+            DatePicker(selection: $date, in: Date.now.advanced(by: 1800)...) {
                 Text("Available On")
             }
             
@@ -60,7 +61,7 @@ struct NewLocketCoreInfoView: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
-                .disabled(model.locket.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || model.locket.unlocksAt < .now)
+                .disabled(model.locket.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || date < .now)
             }
         }
         .padding()
