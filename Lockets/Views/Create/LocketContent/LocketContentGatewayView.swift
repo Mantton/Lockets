@@ -16,7 +16,7 @@ struct LocketContentGatewayView : View {
                 case .note:
                     CreateNoteLocketView()
                 case .letter:
-                    Text("Letter")
+                    CreateLetterLocketView()
                 case .image:
                     Text("Image")
                 case .link:

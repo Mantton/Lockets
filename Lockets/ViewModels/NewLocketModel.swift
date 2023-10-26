@@ -25,7 +25,7 @@ final class NewLocketModel {
         }
     }
     
-    func addNoteContent(_ content: String) {
+    func addTextContent(_ content: String) {
         locket.text = content
     }
     

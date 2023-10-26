@@ -1,13 +1,13 @@
 //
-//  CreateNoteLocketView.swift
+//  CreateLetterLocketView.swift
 //  Lockets
 //
-//  Created by Mantton on 2023-10-25.
+//  Created by Mantton on 2023-10-26.
 //
 
 import SwiftUI
 
-struct CreateNoteLocketView: View {
+struct CreateLetterLocketView: View {
     @Environment(NewLocketModel.self) private var model
     @State private var text = ""
     var body: some View {
@@ -15,7 +15,7 @@ struct CreateNoteLocketView: View {
             VStack (alignment: .leading){
                 Text("Time to create an exciting new memory!")
                     .font(.headline)
-                Text("Write your note below!")
+                Text("Write your letter below!")
                     .font(.subheadline)
                     .italic()
                     .foregroundStyle(.gray)
@@ -31,7 +31,7 @@ struct CreateNoteLocketView: View {
             HStack (spacing: 3) {
                 Spacer()
                 if characterCount != 0 {
-                    Text("\(characterCount) of \(NOTE_CHARACTER_LIMIT) Characters ")
+                    Text("\(characterCount) of \(LETTER_CHARACTER_LIMIT) Characters ")
                         .font(.footnote)
                         .fontWeight(.light)
                         .opacity(0.7)
@@ -52,7 +52,7 @@ struct CreateNoteLocketView: View {
         text.trimmingCharacters(in: .whitespacesAndNewlines).count
     }
     private var fill: Double {
-        Double(text.count) / Double(NOTE_CHARACTER_LIMIT)
+        Double(text.count) / Double(LETTER_CHARACTER_LIMIT)
     }
     
     private func submit() {
@@ -61,7 +61,5 @@ struct CreateNoteLocketView: View {
 }
 
 #Preview {
-    CreateNoteLocketView()
-        .padding()
-        .environment(NewLocketModel())
+    CreateLetterLocketView()
 }
