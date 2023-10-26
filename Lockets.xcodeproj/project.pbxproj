@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */; };
+		DF4F3F842AE9E34C009BE544 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F832AE9E34C009BE544 /* ContentView.swift */; };
+		DF4F3F882AE9E34E009BE544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4F3F872AE9E34E009BE544 /* Assets.xcassets */; };
+		DF4F3F8C2AE9E34E009BE544 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4F3F8B2AE9E34E009BE544 /* Preview Assets.xcassets */; };
+		DF4F3F962AE9E370009BE544 /* Locket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F952AE9E370009BE544 /* Locket.swift */; };
+		DF4F3F992AE9E8C3009BE544 /* LocketContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F982AE9E8C3009BE544 /* LocketContent.swift */; };
+		DF4F3F9E2AE9EDEA009BE544 /* LockedLocketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F9D2AE9EDEA009BE544 /* LockedLocketsView.swift */; };
+		DF4F3FA02AE9EEB1009BE544 /* UnlockedLocketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F9F2AE9EEB1009BE544 /* UnlockedLocketsView.swift */; };
+		DF4F3FA42AE9F087009BE544 /* AddNewLocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FA32AE9F087009BE544 /* AddNewLocketView.swift */; };
+		DF4F3FA72AE9F24F009BE544 /* NewLocketTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FA62AE9F24F009BE544 /* NewLocketTypeView.swift */; };
+		DF4F3FAA2AE9F2B8009BE544 /* NewLocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FA92AE9F2B8009BE544 /* NewLocketModel.swift */; };
+		DF4F3FAD2AE9FB7F009BE544 /* Lockets+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FAC2AE9FB7F009BE544 /* Lockets+Color.swift */; };
+		DF4F3FB02AE9FD3B009BE544 /* LocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FAF2AE9FD3B009BE544 /* LocketType.swift */; };
+		DF4F3FB62AEA0138009BE544 /* LocketContentGatewayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FB52AEA0138009BE544 /* LocketContentGatewayView.swift */; };
+		DF4F3FB82AEA01DA009BE544 /* CreateNoteLocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */; };
+		DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */; };
+		DF4F3FBD2AEA14D4009BE544 /* NewLocketCoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF4F3F7E2AE9E34C009BE544 /* Lockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketsApp.swift; sourceTree = "<group>"; };
+		DF4F3F832AE9E34C009BE544 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF4F3F872AE9E34E009BE544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF4F3F892AE9E34E009BE544 /* Lockets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lockets.entitlements; sourceTree = "<group>"; };
+		DF4F3F8B2AE9E34E009BE544 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF4F3F8D2AE9E34E009BE544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF4F3F952AE9E370009BE544 /* Locket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locket.swift; sourceTree = "<group>"; };
+		DF4F3F982AE9E8C3009BE544 /* LocketContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketContent.swift; sourceTree = "<group>"; };
+		DF4F3F9D2AE9EDEA009BE544 /* LockedLocketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedLocketsView.swift; sourceTree = "<group>"; };
+		DF4F3F9F2AE9EEB1009BE544 /* UnlockedLocketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLocketsView.swift; sourceTree = "<group>"; };
+		DF4F3FA32AE9F087009BE544 /* AddNewLocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLocketView.swift; sourceTree = "<group>"; };
+		DF4F3FA62AE9F24F009BE544 /* NewLocketTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketTypeView.swift; sourceTree = "<group>"; };
+		DF4F3FA92AE9F2B8009BE544 /* NewLocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketModel.swift; sourceTree = "<group>"; };
+		DF4F3FAC2AE9FB7F009BE544 /* Lockets+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lockets+Color.swift"; sourceTree = "<group>"; };
+		DF4F3FAF2AE9FD3B009BE544 /* LocketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketType.swift; sourceTree = "<group>"; };
+		DF4F3FB52AEA0138009BE544 /* LocketContentGatewayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketContentGatewayView.swift; sourceTree = "<group>"; };
+		DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteLocketView.swift; sourceTree = "<group>"; };
+		DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocketCoreInfoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF4F3F7B2AE9E34C009BE544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF4F3F752AE9E34C009BE544 = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F802AE9E34C009BE544 /* Lockets */,
+				DF4F3F7F2AE9E34C009BE544 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF4F3F7F2AE9E34C009BE544 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F7E2AE9E34C009BE544 /* Lockets.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF4F3F802AE9E34C009BE544 /* Lockets */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FAE2AE9FD31009BE544 /* Utils */,
+				DF4F3FAB2AE9FB6D009BE544 /* Extensions */,
+				DF4F3FA82AE9F2A7009BE544 /* ViewModels */,
+				DF4F3F942AE9E35E009BE544 /* Models */,
+				DF4F3F932AE9E356009BE544 /* Views */,
+				DF4F3F872AE9E34E009BE544 /* Assets.xcassets */,
+				DF4F3F892AE9E34E009BE544 /* Lockets.entitlements */,
+				DF4F3F8D2AE9E34E009BE544 /* Info.plist */,
+				DF4F3F8A2AE9E34E009BE544 /* Preview Content */,
+			);
+			path = Lockets;
+			sourceTree = "<group>";
+		};
+		DF4F3F8A2AE9E34E009BE544 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F8B2AE9E34E009BE544 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF4F3F932AE9E356009BE544 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FB92AEA075E009BE544 /* Misc */,
+				DF4F3FA52AE9F236009BE544 /* Create */,
+				DF4F3F9C2AE9EB83009BE544 /* Unlocked */,
+				DF4F3F9B2AE9EB7C009BE544 /* Locked */,
+				DF4F3F9A2AE9E9FE009BE544 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF4F3F942AE9E35E009BE544 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F952AE9E370009BE544 /* Locket.swift */,
+				DF4F3F982AE9E8C3009BE544 /* LocketContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF4F3F9A2AE9E9FE009BE544 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */,
+				DF4F3F832AE9E34C009BE544 /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DF4F3F9B2AE9EB7C009BE544 /* Locked */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F9D2AE9EDEA009BE544 /* LockedLocketsView.swift */,
+			);
+			path = Locked;
+			sourceTree = "<group>";
+		};
+		DF4F3F9C2AE9EB83009BE544 /* Unlocked */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3F9F2AE9EEB1009BE544 /* UnlockedLocketsView.swift */,
+			);
+			path = Unlocked;
+			sourceTree = "<group>";
+		};
+		DF4F3FA52AE9F236009BE544 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FB12AEA00FB009BE544 /* LocketContent */,
+				DF4F3FA32AE9F087009BE544 /* AddNewLocketView.swift */,
+				DF4F3FA62AE9F24F009BE544 /* NewLocketTypeView.swift */,
+				DF4F3FBC2AEA14D4009BE544 /* NewLocketCoreInfoView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		DF4F3FA82AE9F2A7009BE544 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FA92AE9F2B8009BE544 /* NewLocketModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF4F3FAB2AE9FB6D009BE544 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FAC2AE9FB7F009BE544 /* Lockets+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF4F3FAE2AE9FD31009BE544 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FAF2AE9FD3B009BE544 /* LocketType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DF4F3FB12AEA00FB009BE544 /* LocketContent */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FB52AEA0138009BE544 /* LocketContentGatewayView.swift */,
+				DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */,
+			);
+			path = LocketContent;
+			sourceTree = "<group>";
+		};
+		DF4F3FB92AEA075E009BE544 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF4F3F7D2AE9E34C009BE544 /* Lockets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF4F3F902AE9E34E009BE544 /* Build configuration list for PBXNativeTarget "Lockets" */;
+			buildPhases = (
+				DF4F3F7A2AE9E34C009BE544 /* Sources */,
+				DF4F3F7B2AE9E34C009BE544 /* Frameworks */,
+				DF4F3F7C2AE9E34C009BE544 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lockets;
+			productName = Lockets;
+			productReference = DF4F3F7E2AE9E34C009BE544 /* Lockets.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF4F3F762AE9E34C009BE544 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DF4F3F7D2AE9E34C009BE544 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = DF4F3F792AE9E34C009BE544 /* Build configuration list for PBXProject "Lockets" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF4F3F752AE9E34C009BE544;
+			productRefGroup = DF4F3F7F2AE9E34C009BE544 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF4F3F7D2AE9E34C009BE544 /* Lockets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF4F3F7C2AE9E34C009BE544 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF4F3F8C2AE9E34E009BE544 /* Preview Assets.xcassets in Resources */,
+				DF4F3F882AE9E34E009BE544 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF4F3F7A2AE9E34C009BE544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF4F3F842AE9E34C009BE544 /* ContentView.swift in Sources */,
+				DF4F3FBD2AEA14D4009BE544 /* NewLocketCoreInfoView.swift in Sources */,
+				DF4F3FAA2AE9F2B8009BE544 /* NewLocketModel.swift in Sources */,
+				DF4F3FA02AE9EEB1009BE544 /* UnlockedLocketsView.swift in Sources */,
+				DF4F3FB82AEA01DA009BE544 /* CreateNoteLocketView.swift in Sources */,
+				DF4F3F992AE9E8C3009BE544 /* LocketContent.swift in Sources */,
+				DF4F3FA72AE9F24F009BE544 /* NewLocketTypeView.swift in Sources */,
+				DF4F3FB62AEA0138009BE544 /* LocketContentGatewayView.swift in Sources */,
+				DF4F3FA42AE9F087009BE544 /* AddNewLocketView.swift in Sources */,
+				DF4F3F962AE9E370009BE544 /* Locket.swift in Sources */,
+				DF4F3FB02AE9FD3B009BE544 /* LocketType.swift in Sources */,
+				DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */,
+				DF4F3F9E2AE9EDEA009BE544 /* LockedLocketsView.swift in Sources */,
+				DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */,
+				DF4F3FAD2AE9FB7F009BE544 /* Lockets+Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF4F3F8E2AE9E34E009BE544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF4F3F8F2AE9E34E009BE544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		DF4F3F912AE9E34E009BE544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lockets/Lockets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lockets/Preview Content\"";
+				DEVELOPMENT_TEAM = KL9W2NU9C5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lockets/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceres.Lockets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF4F3F922AE9E34E009BE544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lockets/Lockets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lockets/Preview Content\"";
+				DEVELOPMENT_TEAM = KL9W2NU9C5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lockets/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceres.Lockets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF4F3F792AE9E34C009BE544 /* Build configuration list for PBXProject "Lockets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF4F3F8E2AE9E34E009BE544 /* Debug */,
+				DF4F3F8F2AE9E34E009BE544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF4F3F902AE9E34E009BE544 /* Build configuration list for PBXNativeTarget "Lockets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF4F3F912AE9E34E009BE544 /* Debug */,
+				DF4F3F922AE9E34E009BE544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF4F3F762AE9E34C009BE544 /* Project object */;
+}
