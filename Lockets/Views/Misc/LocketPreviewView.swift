@@ -66,14 +66,28 @@ struct LocketContentView : View {
             case .letter:
                 Text(data.text)
             case .image:
-                EmptyView()
+                Group {
+                    if let imageData = data.attachement,
+                       let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                    } else {
+                        Image(systemName: "exclamationmark.triangle")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             case .link:
                 EmptyView()
             case .audio:
                 EmptyView()
             case .video:
                 EmptyView()
-
+                
             }
         }
         .padding(.all, 5)

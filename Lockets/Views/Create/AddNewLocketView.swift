@@ -39,6 +39,7 @@ struct AddNewLocketView: View {
                   UIScrollView.appearance().isScrollEnabled = false
             }
         }
+        .tint(model.locket.type.color)
     }
 }
 
