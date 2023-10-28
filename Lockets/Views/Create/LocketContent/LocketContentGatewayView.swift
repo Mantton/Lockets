@@ -22,7 +22,7 @@ struct LocketContentGatewayView : View {
                 case .link:
                     Text("Link")
                 case .audio:
-                    Text("Audio")
+                    CreateAudioLocketView()
                 case .video:
                     Text("Video")
                 }

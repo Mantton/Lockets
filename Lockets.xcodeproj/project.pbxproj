@@ -31,6 +31,10 @@
 		DF6944732AEB259900906461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6944722AEB259900906461 /* Constants.swift */; };
 		DF6944752AEB261F00906461 /* CreatePhotoLocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6944742AEB261F00906461 /* CreatePhotoLocketView.swift */; };
 		DF6944772AEB309100906461 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6944762AEB309100906461 /* Photo.swift */; };
+		DF6944792AEB55B500906461 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6944782AEB55B500906461 /* AudioRecorder.swift */; };
+		DF69447D2AEB584600906461 /* Lockets+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69447C2AEB584600906461 /* Lockets+FileManager.swift */; };
+		DF69447F2AEB614600906461 /* CreateAudioLocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69447E2AEB614600906461 /* CreateAudioLocketView.swift */; };
+		DF6944812AEB660500906461 /* Lockets+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6944802AEB660500906461 /* Lockets+URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,10 @@
 		DF6944722AEB259900906461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DF6944742AEB261F00906461 /* CreatePhotoLocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePhotoLocketView.swift; sourceTree = "<group>"; };
 		DF6944762AEB309100906461 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		DF6944782AEB55B500906461 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		DF69447C2AEB584600906461 /* Lockets+FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lockets+FileManager.swift"; sourceTree = "<group>"; };
+		DF69447E2AEB614600906461 /* CreateAudioLocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAudioLocketView.swift; sourceTree = "<group>"; };
+		DF6944802AEB660500906461 /* Lockets+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lockets+URL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				DF4F3FAC2AE9FB7F009BE544 /* Lockets+Color.swift */,
+				DF69447C2AEB584600906461 /* Lockets+FileManager.swift */,
+				DF6944802AEB660500906461 /* Lockets+URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,6 +205,7 @@
 				DF4F3FC12AEAF03C009BE544 /* NewLocketData.swift */,
 				DF6944722AEB259900906461 /* Constants.swift */,
 				DF6944762AEB309100906461 /* Photo.swift */,
+				DF6944782AEB55B500906461 /* AudioRecorder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 				DF4F3FB72AEA01DA009BE544 /* CreateNoteLocketView.swift */,
 				DF6944702AEB256700906461 /* CreateLetterLocketView.swift */,
 				DF6944742AEB261F00906461 /* CreatePhotoLocketView.swift */,
+				DF69447E2AEB614600906461 /* CreateAudioLocketView.swift */,
 			);
 			path = LocketContent;
 			sourceTree = "<group>";
@@ -291,11 +303,14 @@
 			files = (
 				DF4F3F842AE9E34C009BE544 /* ContentView.swift in Sources */,
 				DF4F3FBD2AEA14D4009BE544 /* NewLocketCoreInfoView.swift in Sources */,
+				DF6944792AEB55B500906461 /* AudioRecorder.swift in Sources */,
+				DF6944812AEB660500906461 /* Lockets+URL.swift in Sources */,
 				DF4F3FAA2AE9F2B8009BE544 /* NewLocketModel.swift in Sources */,
 				DF4F3FA02AE9EEB1009BE544 /* UnlockedLocketsView.swift in Sources */,
 				DF4F3FB82AEA01DA009BE544 /* CreateNoteLocketView.swift in Sources */,
 				DF4F3F992AE9E8C3009BE544 /* LocketContent.swift in Sources */,
 				DF6944712AEB256700906461 /* CreateLetterLocketView.swift in Sources */,
+				DF69447F2AEB614600906461 /* CreateAudioLocketView.swift in Sources */,
 				DF4F3FA72AE9F24F009BE544 /* NewLocketTypeView.swift in Sources */,
 				DF4F3FB62AEA0138009BE544 /* LocketContentGatewayView.swift in Sources */,
 				DF4F3FA42AE9F087009BE544 /* AddNewLocketView.swift in Sources */,
@@ -305,6 +320,7 @@
 				DF4F3FB02AE9FD3B009BE544 /* LocketType.swift in Sources */,
 				DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */,
 				DF4F3F9E2AE9EDEA009BE544 /* LockedLocketsView.swift in Sources */,
+				DF69447D2AEB584600906461 /* Lockets+FileManager.swift in Sources */,
 				DF6944732AEB259900906461 /* Constants.swift in Sources */,
 				DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */,
 				DF6944772AEB309100906461 /* Photo.swift in Sources */,
@@ -369,6 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -424,6 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -441,10 +459,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lockets/Preview Content\"";
 				DEVELOPMENT_TEAM = KL9W2NU9C5;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lockets/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone to record audio.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -460,7 +479,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ceres.Lockets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceresmir.Lockets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -480,10 +499,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lockets/Preview Content\"";
 				DEVELOPMENT_TEAM = KL9W2NU9C5;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Lockets/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone to record audio.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -499,7 +519,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ceres.Lockets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceresmir.Lockets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
