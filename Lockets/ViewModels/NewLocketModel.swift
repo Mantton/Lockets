@@ -29,10 +29,6 @@ final class NewLocketModel {
         locket.text = content
     }
     
-    func setTitle(_ title: String) {
-        locket.title = title
-    }
-    
     func save(_ context: ModelContext) {
         let object = locket.toLocket()
         context.insert(object)

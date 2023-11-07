@@ -57,9 +57,6 @@ struct LocketContentView : View {
     let data: NewLocketData
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text(data.title)
-                .font(.title3)
-                .bold()
             switch data.type {
             case .note:
                 Text(data.text)
@@ -98,6 +95,6 @@ struct LocketContentView : View {
     }
 }
 #Preview {
-    let data = NewLocketData(title: "The Winds ", text: "f High Garden.")
+    let data = NewLocketData(text: "f High Garden.")
     return LocketPreviewView(data: data)
 }

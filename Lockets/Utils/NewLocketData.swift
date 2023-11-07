@@ -9,7 +9,6 @@ import Foundation
 
 
 struct NewLocketData {
-    var title: String = ""
     var type: LocketType = .note
     var text: String = ""
     var attachement: Data?
@@ -19,7 +18,7 @@ struct NewLocketData {
     
     
     func toLocket() -> Locket {
-        let locket = Locket(title: title, type: type, unlocksAt: unlocksAt)
+        let locket = Locket(type: type, unlocksAt: unlocksAt)
         locket.onlyShowWhenUnlockable = onlyShowWhenUnlockable
         
         let preppedText = text.trimmingCharacters(in: .whitespacesAndNewlines)

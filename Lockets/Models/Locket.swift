@@ -12,7 +12,6 @@ import SwiftUI
 
 @Model
 final class Locket {
-    var title: String
     var type: LocketType
     var createdAt = Date.now
     
@@ -29,8 +28,7 @@ final class Locket {
     var link: LocketLinkAttachment?
 
     
-    init(title: String, type: LocketType, createdAt: Foundation.Date = Date.now, unlocksAt: Date, isUnlocked: Bool = false) {
-        self.title = title
+    init(type: LocketType, createdAt: Foundation.Date = Date.now, unlocksAt: Date, isUnlocked: Bool = false) {
         self.type = type
         self.createdAt = createdAt
         self.unlocksAt = unlocksAt

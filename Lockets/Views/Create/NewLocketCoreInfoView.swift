@@ -23,20 +23,6 @@ struct NewLocketCoreInfoView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("Name")
                     .font(.callout)
-                TextField(text: $model.locket.title) {
-                    Text("Locket Name")
-                }
-                .focused($isTitleFocused)
-                .padding()
-                .overlay {
-                    if isTitleFocused {
-                        RoundedRectangle(cornerRadius: 7)
-                            .stroke(Color.accentColor.opacity(0.8), lineWidth: 2)
-                    } else {
-                        RoundedRectangle(cornerRadius: 7)
-                            .stroke(Color.primary.opacity(0.8), lineWidth: 1.5)
-                    }
-                }
             }
             
             DatePicker(selection: $date, in: Date.now.advanced(by: 1800)...) {
@@ -61,7 +47,7 @@ struct NewLocketCoreInfoView: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.large)
-                .disabled(model.locket.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || date < .now)
+                .disabled(date < .now)
             }
         }
         .padding()

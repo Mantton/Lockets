@@ -30,7 +30,7 @@ struct LockedLocketsView: View {
                 
                 Section {
                     ForEach(available) { locket in
-                        Text(locket.title)
+                        Text("Locket Cell Highlight")
                             .listRowSeparator(.hidden)
 
                     }
@@ -40,9 +40,8 @@ struct LockedLocketsView: View {
             
                 Section {
                     ForEach(upcoming) { locket in
-                        Text(locket.title)
+                        Text("Locket Cell Highlight")
                             .listRowSeparator(.hidden)
-
                     }
                 } header: {
                     Text("Upcoming")
