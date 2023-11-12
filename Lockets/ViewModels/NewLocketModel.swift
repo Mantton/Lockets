@@ -29,6 +29,15 @@ final class NewLocketModel {
         locket.text = content
     }
     
+    func addAudioContent(_ file: URL) {
+        do {
+            locket.attachement = try Data(contentsOf: file)
+            try? FileManager.default.removeItem(at: file)
+        } catch {
+            print("addAudioContent", error)
+        }
+    }
+    
     func save(_ context: ModelContext) {
         let object = locket.toLocket()
         context.insert(object)

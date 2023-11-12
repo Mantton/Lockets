@@ -20,11 +20,6 @@ struct NewLocketCoreInfoView: View {
             Text("Locket Info")
                 .font(.headline)
             
-            VStack(alignment: .leading, spacing: 3) {
-                Text("Name")
-                    .font(.callout)
-            }
-            
             DatePicker(selection: $date, in: Date.now.advanced(by: 1800)...) {
                 Text("Available On")
             }

@@ -15,19 +15,19 @@ struct LocketPreviewView: View {
         ZStack(alignment: .center) {
             GeometryReader { proxy in
                 Group {
-                    let width = proxy.size.width * 0.75
+                    let width = proxy.size.width * 0.7
                     ZStack {
                         RoundedRectangle(cornerRadius: 25)
-                            .foregroundStyle(data.type.color)
+                            .foregroundStyle(Color.offWhite)
                             .shadow(radius: 10)
                         LocketContentView(data: data)
                         
                     }
-                    .frame(width: width, height: width * 1.6, alignment: .center)
+                    .frame(width: width, height: width * 1.5, alignment: .center)
                     .overlay {
                         Group {
                             RoundedRectangle(cornerRadius: 25)
-                                .foregroundStyle(data.type.color)
+                                .foregroundStyle(Color.offWhite)
                                 .shadow(radius: 7)
                                 .rotation3DEffect(
                                     .degrees(isOpen ? -165 : 0),
@@ -81,20 +81,69 @@ struct LocketContentView : View {
             case .link:
                 EmptyView()
             case .audio:
-                EmptyView()
+                if let audio = data.attachement {
+                    AudioView(audio: audio)
+                } else {
+                    Text("Unable to play audio")
+                }
             case .video:
                 EmptyView()
                 
             }
         }
+        .foregroundStyle(.primary)
         .padding(.all, 5)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(data.type.color)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding()
     }
 }
-#Preview {
-    let data = NewLocketData(text: "f High Garden.")
-    return LocketPreviewView(data: data)
+
+
+extension LocketContentView {
+    struct AudioView : View {
+        let audio: Data
+        @State private var player = AudioPlayer()
+        var body: some View {
+            VStack(alignment: .center) {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        Task {
+                            player.isPlaying ? player.setIsPlaying(false) : player.play(with: audio)
+                        }
+                    } label: {
+                        Group {
+                            if player.isPlaying {
+                                Image(systemName: "stop")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundStyle(.black.opacity(0.3))
+                                    .shadow(color: Color.black.opacity(0.2), radius: 13.5, x: 10, y: 10)
+                                    .shadow(color: Color.white.opacity(0.6), radius: 13.5, x: -5, y: -5)
+                            } else {
+                                Image(systemName:"play")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundStyle(.black.opacity(0.3))
+                                    .offset(x: 3)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 13.5, x: 10, y: 10)
+                                    .shadow(color: Color.white.opacity(0.6), radius: 13.5, x: -5, y: -5)
+                            }
+                        }
+
+                    }
+                    .frame(width: 100, height: 100)
+                    .buttonStyle(NeumorphicButtonStyle())
+                    Spacer()
+                }
+                Spacer()
+            }
+            .padding()
+            .onDisappear {
+                player.setIsPlaying(false)
+            }
+        }
+    }
 }

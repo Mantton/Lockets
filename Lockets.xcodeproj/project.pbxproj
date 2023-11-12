@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1601F52B00378C00074348 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1601F42B00378C00074348 /* AudioPlayer.swift */; };
+		DF209C602AFAE09D00971E0E /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF209C5F2AFAE09D00971E0E /* NeumorphicButton.swift */; };
 		DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */; };
 		DF4F3F842AE9E34C009BE544 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F832AE9E34C009BE544 /* ContentView.swift */; };
 		DF4F3F882AE9E34E009BE544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4F3F872AE9E34E009BE544 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF1601F42B00378C00074348 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DF209C5F2AFAE09D00971E0E /* NeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
 		DF4F3F7E2AE9E34C009BE544 /* Lockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketsApp.swift; sourceTree = "<group>"; };
 		DF4F3F832AE9E34C009BE544 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF209C5E2AFAE08700971E0E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				DF209C5F2AFAE09D00971E0E /* NeumorphicButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		DF4F3F752AE9E34C009BE544 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 		DF4F3F932AE9E356009BE544 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DF209C5E2AFAE08700971E0E /* Buttons */,
 				DF4F3FB92AEA075E009BE544 /* Misc */,
 				DF4F3FA52AE9F236009BE544 /* Create */,
 				DF4F3F9C2AE9EB83009BE544 /* Unlocked */,
@@ -206,6 +219,7 @@
 				DF6944722AEB259900906461 /* Constants.swift */,
 				DF6944762AEB309100906461 /* Photo.swift */,
 				DF6944782AEB55B500906461 /* AudioRecorder.swift */,
+				DF1601F42B00378C00074348 /* AudioPlayer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +332,7 @@
 				DF6944752AEB261F00906461 /* CreatePhotoLocketView.swift in Sources */,
 				DF4F3F962AE9E370009BE544 /* Locket.swift in Sources */,
 				DF4F3FB02AE9FD3B009BE544 /* LocketType.swift in Sources */,
+				DF209C602AFAE09D00971E0E /* NeumorphicButton.swift in Sources */,
 				DF4F3FBB2AEA076A009BE544 /* CircularProgressView.swift in Sources */,
 				DF4F3F9E2AE9EDEA009BE544 /* LockedLocketsView.swift in Sources */,
 				DF69447D2AEB584600906461 /* Lockets+FileManager.swift in Sources */,
@@ -327,6 +342,7 @@
 				DF4F3FC02AEAEBE5009BE544 /* NewLocketPreviewView.swift in Sources */,
 				DF4F3FAD2AE9FB7F009BE544 /* Lockets+Color.swift in Sources */,
 				DF69446F2AEAF69400906461 /* LocketPreviewView.swift in Sources */,
+				DF1601F52B00378C00074348 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ struct NewLocketPreviewView: View {
                     model.save(modelContext)
                     dismiss.callAsFunction()
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.bordered)
                 .controlSize(.large)
                 
                 Button("Back") {

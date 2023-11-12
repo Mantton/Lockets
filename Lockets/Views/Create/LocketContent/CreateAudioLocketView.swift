@@ -29,6 +29,7 @@ struct CreateAudioLocketView: View {
 struct AudioRecordingView: View {
     @Binding var start: Bool
     @State private var recorder = AudioRecorder()
+    @Environment(NewLocketModel.self) private var model
     var body: some View {
         ZStack {
             if recorder.isRecording {
@@ -45,6 +46,7 @@ struct AudioRecordingView: View {
                 }
             } else if recorder.storedRecording != nil {
                 VStack(spacing: 15) {
+                    Spacer()
                     if !recorder.isPlaying {
                         Button{ recorder.playAudio() } label: {
                             Label("Play", systemImage: "play")
@@ -58,20 +60,21 @@ struct AudioRecordingView: View {
                         .buttonStyle(.bordered)
                         .controlSize(.large)
                     }
-
-                    VStack(spacing: 3) {
-                        Button { } label: {
-                            Label("Proceed", systemImage: "play")
-                        }
-                        .buttonStyle(.bordered)
-                        .controlSize(.large)
-                        Button("Record Another"){
-                            start = false
-                        }
-                        .buttonStyle(.plain)
-                        .font(.footnote)
-                        .foregroundStyle(.black.opacity(0.5))
+                    Button {
+                        model.addAudioContent(recorder.storedRecording!)
+                        model.setState(.core)
+                    } label: {
+                        Label("Proceed", systemImage: "play")
                     }
+                    .buttonStyle(.bordered)
+                    .controlSize(.large)
+                    Spacer()
+                    Button("Record Another"){
+                        start = false
+                    }
+                    .buttonStyle(.plain)
+                    .font(.footnote)
+                    .foregroundStyle(.primary.opacity(0.5))
                 }
             } else {
                 ProgressView()
@@ -83,12 +86,7 @@ struct AudioRecordingView: View {
         .animation(.default, value: recorder.isPlaying)
         .animation(.default, value: recorder.isRecording)
         .animation(.default, value: recorder.currentRecordingDuration)
-
-
+        
+        
     }
-}
-
-#Preview {
-    CreateAudioLocketView()
-        .tint(LocketType.audio.color)
 }
