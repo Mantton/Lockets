@@ -26,6 +26,8 @@ struct CreatePhotoLocketView: View {
 
 struct ChoosePhotoView: View {
     @State private var pickerSelection: PhotosPickerItem?
+    @State private var cameraSelection: UIImage?
+    @State private var presentCameraView = false
     @Environment(NewLocketModel.self) private var model
     
     var body: some View {
@@ -50,7 +52,7 @@ struct ChoosePhotoView: View {
             }
             .padding(.horizontal)
             
-            Button {} label: {
+            Button { presentCameraView.toggle() } label: {
                 Label("Take Photo", systemImage: "camera")
             }
             .buttonStyle(.bordered)
@@ -67,6 +69,15 @@ struct ChoosePhotoView: View {
                     print(error)
                 }
             })
+        }
+        .sheet(isPresented: $presentCameraView){
+            CameraView(selection: $cameraSelection)
+        }
+        .onChange(of: cameraSelection) {
+            guard let data = cameraSelection?.pngData() else { return }
+            withAnimation {
+                model.locket.attachement = data
+            }
         }
     }
 }

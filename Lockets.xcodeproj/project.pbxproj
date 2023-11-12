@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF1601F52B00378C00074348 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1601F42B00378C00074348 /* AudioPlayer.swift */; };
+		DF1601F72B01517900074348 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1601F62B01517900074348 /* CameraView.swift */; };
 		DF209C602AFAE09D00971E0E /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF209C5F2AFAE09D00971E0E /* NeumorphicButton.swift */; };
 		DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */; };
 		DF4F3F842AE9E34C009BE544 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F3F832AE9E34C009BE544 /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		DF1601F42B00378C00074348 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DF1601F62B01517900074348 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		DF209C5F2AFAE09D00971E0E /* NeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
 		DF4F3F7E2AE9E34C009BE544 /* Lockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4F3F812AE9E34C009BE544 /* LocketsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocketsApp.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				DF4F3FBA2AEA076A009BE544 /* CircularProgressView.swift */,
 				DF69446E2AEAF69400906461 /* LocketPreviewView.swift */,
+				DF1601F62B01517900074348 /* CameraView.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				DF69447D2AEB584600906461 /* Lockets+FileManager.swift in Sources */,
 				DF6944732AEB259900906461 /* Constants.swift in Sources */,
 				DF4F3F822AE9E34C009BE544 /* LocketsApp.swift in Sources */,
+				DF1601F72B01517900074348 /* CameraView.swift in Sources */,
 				DF6944772AEB309100906461 /* Photo.swift in Sources */,
 				DF4F3FC02AEAEBE5009BE544 /* NewLocketPreviewView.swift in Sources */,
 				DF4F3FAD2AE9FB7F009BE544 /* Lockets+Color.swift in Sources */,
