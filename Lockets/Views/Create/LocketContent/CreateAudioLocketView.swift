@@ -61,7 +61,7 @@ struct AudioRecordingView: View {
                         .controlSize(.large)
                     }
                     Button {
-                        model.addAudioContent(recorder.storedRecording!)
+                        model.setAttachment(url: recorder.storedRecording!)
                         model.setState(.core)
                     } label: {
                         Label("Proceed", systemImage: "play")

@@ -20,7 +20,7 @@ struct LocketPreviewView: View {
                         RoundedRectangle(cornerRadius: 25)
                             .foregroundStyle(Color.offWhite)
                             .shadow(radius: 10)
-                        LocketContentView(data: data)
+                        LocketPreviewContentView(data: data)
                         
                     }
                     .frame(width: width, height: width * 1.5, alignment: .center)
@@ -53,7 +53,7 @@ struct LocketPreviewView: View {
 }
 
 
-struct LocketContentView : View {
+struct LocketPreviewContentView : View {
     let data: NewLocketData
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -64,12 +64,15 @@ struct LocketContentView : View {
                 Text(data.text)
             case .image:
                 Group {
-                    if let imageData = data.attachement,
-                       let uiImage = UIImage(data: imageData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                    if let url = data.attachement {
+                        AsyncImage(url: data.attachement, content: { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        }, placeholder: {
+                            ProgressView()
+                        })
+                        .clipShape(RoundedRectangle(cornerRadius: 7))
                     } else {
                         Image(systemName: "exclamationmark.triangle")
                             .resizable()
@@ -81,8 +84,8 @@ struct LocketContentView : View {
             case .link:
                 EmptyView()
             case .audio:
-                if let audio = data.attachement {
-                    AudioView(audio: audio)
+                if let url = data.attachement {
+                    AudioView(url: url)
                 } else {
                     Text("Unable to play audio")
                 }
@@ -100,9 +103,9 @@ struct LocketContentView : View {
 }
 
 
-extension LocketContentView {
+extension LocketPreviewContentView {
     struct AudioView : View {
-        let audio: Data
+        let url: URL
         @State private var player = AudioPlayer()
         var body: some View {
             VStack(alignment: .center) {
@@ -111,7 +114,7 @@ extension LocketContentView {
                     Spacer()
                     Button {
                         Task {
-                            player.isPlaying ? player.setIsPlaying(false) : player.play(with: audio)
+                            player.isPlaying ? player.setIsPlaying(false) : player.play(with: url)
                         }
                     } label: {
                         Group {
@@ -132,7 +135,7 @@ extension LocketContentView {
                                     .shadow(color: Color.white.opacity(0.6), radius: 13.5, x: -5, y: -5)
                             }
                         }
-
+                        
                     }
                     .frame(width: 100, height: 100)
                     .buttonStyle(NeumorphicButtonStyle())

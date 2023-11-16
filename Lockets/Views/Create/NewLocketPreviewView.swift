@@ -27,7 +27,7 @@ struct NewLocketPreviewView: View {
                 Button("Back") {
                     model.setState(.core)
                 }
-                .foregroundStyle(.black.opacity(0.6))
+                .foregroundStyle(.primary.opacity(0.6))
                 
             }
         }

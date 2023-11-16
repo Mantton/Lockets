@@ -12,6 +12,7 @@ import SwiftData
 final class NewLocketModel {
     var state: LocketCreationState = .type
     var locket = NewLocketData()
+    var isSaving = false
     
     func setLocketType(_ type: LocketType) {
         withAnimation {
@@ -28,19 +29,53 @@ final class NewLocketModel {
     func addTextContent(_ content: String) {
         locket.text = content
     }
-    
-    func addAudioContent(_ file: URL) {
-        do {
-            locket.attachement = try Data(contentsOf: file)
-            try? FileManager.default.removeItem(at: file)
-        } catch {
-            print("addAudioContent", error)
-        }
-    }
+
     
     func save(_ context: ModelContext) {
         let object = locket.toLocket()
         context.insert(object)
+    }
+    
+    func setAttachment(url: URL) {
+        locket.attachement = url
+    }
+    
+    func setAttachment(data: Data, ext: String) {
+        withAnimation {
+            isSaving = true
+        }
+        
+        let temp = FileManager.default.temporaryDirectory
+        
+        temp.contents.forEach { url in
+            try? FileManager.default.removeItem(at: url)
+        }
+        
+        
+        func getDestination() -> URL {
+            temp.appending(path: "\(UUID().uuidString).\(ext)", directoryHint: .notDirectory)
+        }
+        var destination = getDestination()
+        
+        if (destination.exists) {
+            repeat {
+                destination = getDestination()
+                print("Ran")
+            } while destination.exists
+        }
+
+        
+        do {
+            try data.write(to: destination)
+        } catch {
+            print("Failed to save attachement to temp directory", error)
+        }
+        
+        withAnimation {
+            locket.attachement = destination
+            isSaving = false
+        }
+        print("Done")
     }
     
 }

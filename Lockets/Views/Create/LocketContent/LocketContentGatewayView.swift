@@ -24,7 +24,7 @@ struct LocketContentGatewayView : View {
                 case .audio:
                     CreateAudioLocketView()
                 case .video:
-                    Text("Video")
+                    CreateVideoLocketView()
                 }
             }
         }

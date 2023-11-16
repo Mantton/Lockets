@@ -10,11 +10,10 @@ import SwiftUI
 
 struct CameraView: UIViewControllerRepresentable {
 
-    @Binding var selection: UIImage?
-    @Environment(\.presentationMode) private var presentationMode
+    @Binding var selection: URL?
+    @Environment(\.dismiss) private var dismiss
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CameraView>) -> UIImagePickerController {
- 
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .camera
@@ -44,12 +43,11 @@ extension CameraView {
         }
      
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-     
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selection = image
+            
+            if let url = info[.imageURL] as? URL {
+                parent.selection = url
             }
-     
-            parent.presentationMode.wrappedValue.dismiss()
+            parent.dismiss.callAsFunction()
         }
     }
 }

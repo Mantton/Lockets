@@ -17,3 +17,12 @@ struct Photo: Transferable {
         }
     }
 }
+
+struct Video: Transferable, Equatable {
+    let data: Data
+    static var transferRepresentation: some TransferRepresentation {
+        DataRepresentation(importedContentType: .appleProtectedMPEG4Video) { data in
+            Video(data: data)
+        }
+    }
+}

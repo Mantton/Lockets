@@ -66,7 +66,7 @@ final class AudioRecorder {
     private func getURL() -> URL {
         let directory = FileManager
             .default
-            .documentDirectory
+            .temporaryDirectory
             .appending(path: "recordings", directoryHint: .isDirectory)
         directory.createDirectory()
         return directory.appending(path: "\(currentRecordingID).wav")

@@ -11,7 +11,7 @@ import Foundation
 struct NewLocketData {
     var type: LocketType = .note
     var text: String = ""
-    var attachement: Data?
+    var attachement: URL?
     var link: URL?
     var unlocksAt = Date.now
     var onlyShowWhenUnlockable = false
@@ -28,9 +28,9 @@ struct NewLocketData {
             locket.letter = letter
         }
         
-        if let attachement {
-            locket.file = LocketFileAttachment(content: attachement)
-        }
+//        if let attachement {
+//            locket.file = LocketFileAttachment(content: attachement)
+//        }
         
         if let link {
             locket.link = LocketLinkAttachment(url: link)
